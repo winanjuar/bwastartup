@@ -24,6 +24,7 @@ func main() {
 	router := gin.Default()
 	api := router.Group("/api/v1")
 	api.POST("/users", userHandler.RegisterUser)
+	api.POST("/sessions", userHandler.Login)
 	router.Run()
 }
 
@@ -41,8 +42,8 @@ func main() {
 // 	context.JSON(http.StatusOK, users)
 // }
 
-// input
-// handler -> mapping input form user ke struct Input
-// service -> mapping struct Input ke struct User
-// repository -> save struct User ke DB
 // db
+// repository -> save struct User ke DB
+// service -> mapping struct Input ke struct User
+// handler -> mapping input form user ke struct Input
+// input
