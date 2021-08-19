@@ -16,5 +16,5 @@ type Transaction struct {
 	User       user.User
 	Campaign   campaign.Campaign
 	CreatedAt  time.Time
-	Updatedat  time.Time
+	UpdatedAt  time.Time
 }
